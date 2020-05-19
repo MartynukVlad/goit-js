@@ -13,5 +13,20 @@
 //  ввода, показывай alert с текстом 'Было введено не число, попробуйте еще раз',
 //  при этом результат prompt плюсовать к общей сумме не нужно, после чего снова 
 // пользователю предлагается ввести число в prompt.
-// let input;
-// let total = 0;
+let input = prompt("введите число");
+let total = 0;
+console.log(typeof input);
+
+// do {
+//     input = +prompt("вводите число или нажмите отмена");
+//     // input = Number(prompt("вводите число или нажмите отмена")); // преобразуем данные полученные из окна в тип данных number 
+//     total += input;
+//     console.log("текущее значение total: ", total);
+// }while(input);
+
+while(input) {
+    input = +prompt("вводите число или нажмите отмена");
+    total += input;
+    console.log("текущее значение total: ", total);
+}
+console.log("итоговое значение total", total);
